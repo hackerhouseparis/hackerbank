@@ -11,9 +11,20 @@ class Menu extends Component {
     const items = ['item1', 'item2', 'item3']
 
     return (
-      <ul>
+      <ul style={{margin: '0', padding: '0', listStyleType: 'none', backgroundColor: '#f1f1f1'}}>
         {items.map((item,key) => {
-            return <li key={key} onClick={this.setActive(key)} style={{color: this.state.active === key ? 'red' : 'black'}}>{item}</li>
+            return (
+              <li key={key} onClick={this.setActive(key)} style=
+                {this.state.active === key ? {backgroundColor:'#5B70F3'} : {backgroundColor:'#4850B9'}}>
+                <a href='#' style={{display:'block', color: '#fff', padding: '8px 16px', textDecoration: 'none', fontWeight: 'bold'}}>
+                {this.state.active === key ?
+                  <span>&rang; </span> :
+                  <span></span>
+                }
+                {item}
+                </a>
+              </li>
+            )
           })
         }
       </ul>

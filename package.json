@@ -27,6 +27,7 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "css-loader": "^0.25.0",
     "node-sass": "^3.11.2",
     "react": "^0.14.6",

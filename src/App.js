@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import 'styles/App.scss'
 
-import SignUpForm from 'components/SignUpForm'
+import Balance from './components/Balance'
 
 const Sandbox = ({ children }) => (
   <div className='Sandbox'>
@@ -16,7 +16,7 @@ class App extends Component {
 
     return (
       <Sandbox>
-        <SignUpForm onSubmit={v => v} />
+        <Balance value='15' />
       </Sandbox>
     )
   }

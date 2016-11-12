@@ -1,0 +1,101 @@
+
+.Balance {
+  background: linear-gradient(to left, #00c6ff , #0072ff);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+
+  .Balance-value-container {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(50,50,50,0.09), 0 6px 6px rgba(50,50,50,0.13);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 24px 38px rgba(50,50,50,0.25), 0 20px 20px rgba(50,50,50,0.22);
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:active {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.09), 0 6px 6px rgba(0,0,0,0.13);
+      transition: all 0.2s ease-in-out;
+    }
+
+    span {
+      color: grey;
+      font-size: 4.5em;
+      font-weight: lighter;
+      font-family: 'Helvetica Neue';
+    }
+  }
+
+  &.expand {
+    border-radius: 0;
+    width: 400px;
+    height: 600px;
+
+    .Balance-value-container {
+      position: relative;
+      border-radius: 0;
+      width: 400px;
+      height: 600px;
+
+      .desription {
+        text-align: center;
+        margin: 10px 0 40px;
+      }
+
+      .ion-android-arrow-back {
+        padding: 20px;
+        font-size: 3em;
+        color: grey;
+        margin-bottom: 50px;
+        position: absolute;
+        top: 0; left: 10px;
+      }
+    }
+  }
+}
+
+.Balance-Form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+
+  &.showModal {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+  }
+
+  button {
+
+    background-color: white;
+    color: #0086FF;
+    border: 1px solid #0086FF;
+    transition: all 0.2s ease-in-out;
+    border-radius: 25px;
+    margin: 10px;
+    cursor: pointer;
+    padding: 15px 70px;
+    outline: none;
+
+    &:hover {
+      background-color: #0086FF;
+      color: white;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}

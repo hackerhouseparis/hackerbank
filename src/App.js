@@ -1,9 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-export default class App extends Component {
+import 'styles/App.scss'
+
+import SignUpForm from 'components/SignUpForm'
+
+const Sandbox = ({ children }) => (
+  <div className='Sandbox'>
+    {children}
+  </div>
+)
+
+class App extends Component {
+
   render() {
+
     return (
-      <h1>Hello, world.</h1>
-    );
+      <Sandbox>
+        <SignUpForm onSubmit={v => v} />
+      </Sandbox>
+    )
   }
 }
+
+export default App

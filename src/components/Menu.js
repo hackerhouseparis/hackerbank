@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import 'styles/Menu.scss'
+
 class Menu extends Component {
 
   state = {active : null}
@@ -13,7 +15,19 @@ class Menu extends Component {
     return (
       <ul>
         {items.map((item,key) => {
-            return <li key={key} onClick={this.setActive(key)} style={{color: this.state.active === key ? 'red' : 'black'}}>{item}</li>
+            return (
+              <div className='Menu'>
+                <li key={key} onClick={this.setActive(key)} className={this.state.active === key ? 'active' : ''}>
+                  <a href='#'>
+                    {this.state.active === key ?
+                      <span>&rang; </span> :
+                      <span></span>
+                    }
+                    {item}
+                  </a>
+                </li>
+              </div>
+            )
           })
         }
       </ul>
